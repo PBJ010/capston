@@ -28,8 +28,19 @@ import MobileCoreServices // 다양한 타입들을 정의해 놓은 헤더 파�
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var cameraa: UIButton!
+    @IBOutlet weak var gallary: UIButton!
+    @IBOutlet weak var info: UIButton!
     @IBOutlet weak var timer: UIButton!
+    @IBOutlet weak var cbutton1: UIButton!
+    @IBOutlet weak var cbutton2: UIButton!
+    @IBOutlet weak var cbutton3: UIButton!
+    @IBOutlet weak var image2: UIImageView!
+    
+    
+    var buttonflag = 0
     var numImage = 1 // 이미지 뷰를 가르키는 변수
+    var timelack = 0
     //timer
       var mTimer : Timer?
       var number : Int = 0
@@ -45,6 +56,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cbutton1.isHidden = true
+        cbutton2.isHidden = true
+        cbutton3.isHidden = true
+        image2.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -147,8 +162,52 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
  
-
-
+    @IBAction func hidden(_ sender: Any) {
+        if (buttonflag == 0)
+        {
+            info.isHidden=true
+            cameraa.isHidden=true
+            gallary.isHidden=true
+            cbutton1.isHidden = false
+            cbutton2.isHidden = false
+            cbutton3.isHidden = false
+            
+            buttonflag = 1
+        }
+        else
+        {
+            info.isHidden=false
+            cameraa.isHidden=false
+            gallary.isHidden=false
+            cbutton1.isHidden = true
+            cbutton2.isHidden = true
+            cbutton3.isHidden = true
+            buttonflag = 0
+            
+        }
+    }
+    
+    @IBAction func change1(_ sender: Any)
+    {
+        sleep(5)
+        imgView.image = UIImage(named: "4")
+    }
+    
+    @IBAction func change2(_ sender: Any)
+    {
+        sleep(5)
+        imgView.image = UIImage(named: "3")
+        
+    }
+    
+    @IBAction func change3(_ sender: Any)
+    {
+        sleep(5)
+        imgView.image = UIImage(named: "2")
+        
+    }
+    
+    
 }
 
 

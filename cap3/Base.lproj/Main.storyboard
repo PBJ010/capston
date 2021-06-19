@@ -71,14 +71,61 @@
                                 <state key="normal" title="변환하기" backgroundImage="button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="hidden:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kcn-k9-Pro"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjh-j2-fLa">
+                                <rect key="frame" x="26" y="584" width="173" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="어진" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="change1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAZ-qn-7JK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kae-dw-uN0">
+                                <rect key="frame" x="235" y="585" width="168" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="김홍도" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="change2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMT-Xu-AOp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQl-oW-brk">
+                                <rect key="frame" x="229" y="705" width="174" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="신윤복" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="change3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X85-M5-kcJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yra-O1-KNx">
+                                <rect key="frame" x="108" y="115" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="uJQ-a0-Z7t"/>
                     <connections>
+                        <outlet property="cameraa" destination="Z9N-it-FgH" id="Ezz-ib-e9J"/>
+                        <outlet property="cbutton1" destination="Gjh-j2-fLa" id="bcj-ah-Yh9"/>
+                        <outlet property="cbutton2" destination="kae-dw-uN0" id="h61-O2-s8x"/>
+                        <outlet property="cbutton3" destination="BQl-oW-brk" id="W0B-ey-8Or"/>
+                        <outlet property="gallary" destination="XV4-gi-eK9" id="5RV-Vy-eyz"/>
+                        <outlet property="image2" destination="Yra-O1-KNx" id="qru-QA-ueE"/>
                         <outlet property="imgView" destination="27J-gI-HpB" id="EUD-j3-4jS"/>
+                        <outlet property="info" destination="Fu3-GV-kYl" id="d2r-Pd-tyE"/>
                         <outlet property="timer" destination="Gcz-UA-AFR" id="AkP-Tr-0wT"/>
                     </connections>
                 </viewController>
@@ -141,6 +188,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5" width="207" height="195"/>
         <image name="bg1" width="1242" height="2208"/>
         <image name="button" width="557" height="156"/>
         <image name="button.png" width="133.67999267578125" height="37.439998626708984"/>
