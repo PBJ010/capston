@@ -26,15 +26,11 @@ class ViewController: UIViewController {
 import UIKit
 import MobileCoreServices // 다양한 타입들을 정의해 놓은 헤더 파일 추가
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ViewController2: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    @IBOutlet weak var timer: UIButton!
     var numImage = 1 // 이미지 뷰를 가르키는 변수
-    //timer
-      var mTimer : Timer?
-      var number : Int = 0
-
-
+    
+    
     @IBOutlet var imgView: UIImageView!
     //@IBOutlet var imgView2: UIImageView!
    // @IBOutlet var imgView3: UIImageView!
@@ -48,7 +44,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // Do any additional setup after loading the view.
     }
 
-    
+
     // 사진 촬영
     @IBAction func btnCaptureImageFromCamera(_ sender: UIButton) {
         
@@ -84,7 +80,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
     }
     
-    
+
     @IBAction func btnLoadImageFromLibrary(_ sender: UIButton) {
         if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
             flagImageSave = false
@@ -99,7 +95,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             myAlert("Photo album inaccessable", message: "Application cannot access the photo albm.")
         }
     }
-
 
     
     // 초기화
@@ -146,8 +141,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.present(alert, animated: true, completion: nil)
     }
     
-    
-
 }
 
 
